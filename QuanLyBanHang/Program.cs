@@ -17,7 +17,8 @@ namespace QuanLyBanHang
             //Application.Run(new frmHangSanXuat());
             //Application.Run(new frmLoaiSanPham());
             //Application.Run(new frmKhachHang());
-            Application.Run(new frmNhanVien());
+            //Application.Run(new frmNhanVien());
+            Application.Run(new frmSanPham());
         }
     }
 }
