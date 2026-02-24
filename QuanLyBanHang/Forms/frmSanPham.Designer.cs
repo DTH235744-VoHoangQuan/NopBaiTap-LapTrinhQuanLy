@@ -400,6 +400,7 @@
             Controls.Add(groupBox1);
             Name = "frmSanPham";
             Text = "frmSanPham";
+            Load += frmSanPham_Load_1;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picHinhAnh).EndInit();

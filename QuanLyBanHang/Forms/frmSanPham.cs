@@ -228,5 +228,10 @@ DialogResult.Yes)
                 frmSanPham_Load(sender, e);
             }
         }
+
+        private void frmSanPham_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

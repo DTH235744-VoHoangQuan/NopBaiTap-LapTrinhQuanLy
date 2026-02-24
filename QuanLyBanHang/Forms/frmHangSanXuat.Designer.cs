@@ -35,7 +35,6 @@
             btnXoa = new Button();
             btnSua = new Button();
             btnThem = new Button();
-            button1 = new Button();
             txtTenHangSanXuat = new TextBox();
             label1 = new Label();
             groupBox2 = new GroupBox();
@@ -65,7 +64,6 @@
             groupBox1.Controls.Add(btnXoa);
             groupBox1.Controls.Add(btnSua);
             groupBox1.Controls.Add(btnThem);
-            groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(txtTenHangSanXuat);
             groupBox1.Controls.Add(label1);
             groupBox1.Location = new Point(0, 12);
@@ -124,15 +122,6 @@
             btnThem.Text = "Thêm";
             btnThem.UseVisualStyleBackColor = true;
             btnThem.Click += btnThem_Click;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(77, 96);
-            button1.Name = "button1";
-            button1.Size = new Size(8, 8);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
             // 
             // txtTenHangSanXuat
             // 
@@ -216,7 +205,6 @@
         private Button btnXoa;
         private Button btnSua;
         private Button btnThem;
-        private Button button1;
         private TextBox txtTenHangSanXuat;
         private Label label1;
         private GroupBox groupBox2;
