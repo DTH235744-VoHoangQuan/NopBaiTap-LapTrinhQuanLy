@@ -19,7 +19,6 @@
             }
             base.Dispose(disposing);
         }
-
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -28,11 +27,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             groupBox1 = new GroupBox();
             btnTimKiem = new Button();
             btnXuat = new Button();
@@ -123,6 +117,7 @@
             btnXuat.TabIndex = 25;
             btnXuat.Text = "Xuất..";
             btnXuat.UseVisualStyleBackColor = true;
+            btnXuat.Click += btnXuat_Click;
             // 
             // btnThoat
             // 
@@ -141,6 +136,7 @@
             btnNhap.TabIndex = 24;
             btnNhap.Text = "Nhập..";
             btnNhap.UseVisualStyleBackColor = true;
+            btnNhap.Click += btnNhap_Click;
             // 
             // btnHuyBo
             // 
@@ -317,79 +313,79 @@
             // groupBox2
             // 
             groupBox2.Controls.Add(dataGridView);
-            groupBox2.Location = new Point(12, 248);
+            groupBox2.Location = new Point(12, 241);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(1040, 315);
-            groupBox2.TabIndex = 2;
+            groupBox2.Size = new Size(1034, 322);
+            groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
-            groupBox2.Text = "Danh sách sản phẩm";
+            groupBox2.Text = "groupBox2";
             // 
             // dataGridView
             // 
-            dataGridView.AllowUserToAddRows = false;
-            dataGridView.AllowUserToDeleteRows = false;
-            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView.AllowUserToOrderColumns = true;
             dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView.Columns.AddRange(new DataGridViewColumn[] { ID, TenLoai, TenHangSanXuat, TenSanPham, SoLuong, DonGia, HinhAnh });
-            dataGridView.Dock = DockStyle.Fill;
             dataGridView.Location = new Point(3, 23);
-            dataGridView.MultiSelect = false;
             dataGridView.Name = "dataGridView";
             dataGridView.RowHeadersWidth = 51;
-            dataGridView.Size = new Size(1034, 289);
+            dataGridView.Size = new Size(1025, 293);
             dataGridView.TabIndex = 0;
             // 
             // ID
             // 
+            ID.DataPropertyName = "ID";
             ID.HeaderText = "ID";
             ID.MinimumWidth = 6;
             ID.Name = "ID";
+            ID.Width = 125;
             // 
             // TenLoai
             // 
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            TenLoai.DefaultCellStyle = dataGridViewCellStyle1;
-            TenLoai.HeaderText = "Phân loại";
+            TenLoai.DataPropertyName = "TenLoai";
+            TenLoai.HeaderText = "Phân Loại";
             TenLoai.MinimumWidth = 6;
             TenLoai.Name = "TenLoai";
+            TenLoai.Width = 125;
             // 
             // TenHangSanXuat
             // 
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            TenHangSanXuat.DefaultCellStyle = dataGridViewCellStyle2;
-            TenHangSanXuat.HeaderText = "Hãng sản xuất";
+            TenHangSanXuat.DataPropertyName = "TenHangSanXuat";
+            TenHangSanXuat.HeaderText = "Hãng Sản Xuất";
             TenHangSanXuat.MinimumWidth = 6;
             TenHangSanXuat.Name = "TenHangSanXuat";
+            TenHangSanXuat.Width = 150;
             // 
             // TenSanPham
             // 
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            TenSanPham.DefaultCellStyle = dataGridViewCellStyle3;
-            TenSanPham.HeaderText = "Tên sản phẩm";
+            TenSanPham.DataPropertyName = "TenSanPham";
+            TenSanPham.HeaderText = "Tên Sản Phẩm";
             TenSanPham.MinimumWidth = 6;
             TenSanPham.Name = "TenSanPham";
+            TenSanPham.Width = 150;
             // 
             // SoLuong
             // 
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleRight;
-            SoLuong.DefaultCellStyle = dataGridViewCellStyle4;
-            SoLuong.HeaderText = "Số lượng";
+            SoLuong.DataPropertyName = "SoLuong";
+            SoLuong.HeaderText = "Số Lượng";
             SoLuong.MinimumWidth = 6;
             SoLuong.Name = "SoLuong";
+            SoLuong.Width = 125;
             // 
             // DonGia
             // 
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleRight;
-            DonGia.DefaultCellStyle = dataGridViewCellStyle5;
-            DonGia.HeaderText = "Đơn giá";
+            DonGia.DataPropertyName = "DonGia";
+            DonGia.HeaderText = "Đơn Giá";
             DonGia.MinimumWidth = 6;
             DonGia.Name = "DonGia";
+            DonGia.Width = 125;
             // 
             // HinhAnh
             // 
-            HinhAnh.HeaderText = "Hình ảnh";
+            HinhAnh.DataPropertyName = "HinhAnh";
+            HinhAnh.HeaderText = "Hình Ảnh";
             HinhAnh.MinimumWidth = 6;
             HinhAnh.Name = "HinhAnh";
+            HinhAnh.Width = 125;
             // 
             // frmSanPham
             // 
