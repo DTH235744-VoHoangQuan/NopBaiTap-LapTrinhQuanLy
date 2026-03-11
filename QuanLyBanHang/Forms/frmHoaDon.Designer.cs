@@ -47,6 +47,7 @@
             btnInHoaDon = new Button();
             btnLapHoaDon = new Button();
             btnLamMoi = new Button();
+            btnNhap = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             SuspendLayout();
@@ -142,7 +143,7 @@
             // 
             // btnXuat
             // 
-            btnXuat.Location = new Point(701, 227);
+            btnXuat.Location = new Point(701, 269);
             btnXuat.Name = "btnXuat";
             btnXuat.Size = new Size(108, 36);
             btnXuat.TabIndex = 34;
@@ -209,11 +210,21 @@
             btnLamMoi.UseVisualStyleBackColor = true;
             btnLamMoi.Click += btnLamMoi_Click;
             // 
+            // btnNhap
+            // 
+            btnNhap.Location = new Point(701, 227);
+            btnNhap.Name = "btnNhap";
+            btnNhap.Size = new Size(108, 36);
+            btnNhap.TabIndex = 37;
+            btnNhap.Text = "Nhập Excel...";
+            btnNhap.UseVisualStyleBackColor = true;
+            // 
             // frmHoaDon
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(856, 381);
+            Controls.Add(btnNhap);
             Controls.Add(btnLamMoi);
             Controls.Add(btnSua);
             Controls.Add(btnXuat);
@@ -250,5 +261,6 @@
         private DataGridViewTextBoxColumn TongTienHoaDon;
         private DataGridViewTextBoxColumn XemChiTiet;
         private Button btnLamMoi;
+        private Button btnNhap;
     }
 }

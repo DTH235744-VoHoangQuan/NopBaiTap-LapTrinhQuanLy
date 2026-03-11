@@ -230,8 +230,6 @@ DialogResult.Yes)
             }
         }
 
-
-
         private void btnNhap_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -271,22 +269,24 @@ DialogResult.Yes)
                         }
                         if (table.Rows.Count > 0)
                         {
-
                             foreach (DataRow r in table.Rows)
                             {
-                                var lsp = context.LoaiSanPham.FirstOrDefault(x => x.TenLoai == r["LoaiSanPham"].ToString());
-                                var hsx = context.HangSanXuat.FirstOrDefault(x => x.TenHangSanXuat == r["HangSanXuat"].ToString());
+                                var lsp = context.LoaiSanPham.FirstOrDefault(x => x.TenLoai == r["TenLoai"].ToString());
+                                var hsx = context.HangSanXuat.FirstOrDefault(x => x.TenHangSanXuat == r["TenHangSanXuat"].ToString());
+
                                 SanPham sp = new SanPham();
                                 sp.LoaiSanPham = lsp;
                                 sp.HangSanXuat = hsx;
                                 sp.TenSanPham = r["TenSanPham"].ToString();
                                 sp.SoLuong = Convert.ToInt32(r["SoLuong"]);
                                 sp.DonGia = Convert.ToInt32(r["DonGia"]);
+                                sp.HinhAnh = r["HinhAnh"].ToString();
                                 context.SanPham.Add(sp);
                             }
                             context.SaveChanges();
                             MessageBox.Show("Đã nhập thành công " + table.Rows.Count + " dòng.", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             frmSanPham_Load_1(sender, e);
+
                         }
                         if (firstRow)
                             MessageBox.Show("Tập tin Excel rỗng.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -315,18 +315,19 @@ DialogResult.Yes)
                 try
                 {
                     DataTable table = new DataTable();
-                    table.Columns.AddRange(new DataColumn[5] {
+                    table.Columns.AddRange(new DataColumn[6] {
                         new DataColumn("TenLoai", typeof(string)),
                         new DataColumn("HangSanXuat", typeof(string)),
                         new DataColumn("TenSanPham", typeof(string)),
                         new DataColumn("SoLuong", typeof(string)),
-                        new DataColumn("DonGia", typeof(string))
+                        new DataColumn("DonGia", typeof(string)),
+                        new DataColumn("HinhAnh", typeof(string))
                         });
                     var sanPham = context.SanPham.ToList();
                     if (sanPham != null)
                     {
                         foreach (var p in sanPham)
-                            table.Rows.Add(p.LoaiSanPhamID, p.HangSanXuatID, p.TenSanPham, p.SoLuong, p.DonGia);
+                            table.Rows.Add(p.LoaiSanPhamID, p.HangSanXuatID, p.TenSanPham, p.SoLuong, p.DonGia, p.HinhAnh);
                     }
                     using (XLWorkbook wb = new XLWorkbook())
                     {
