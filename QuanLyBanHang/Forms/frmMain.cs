@@ -30,6 +30,7 @@ namespace QuanLyBanHang.Forms
         public frmMain()
         {
             InitializeComponent();
+            this.IsMdiContainer = true;
         }
 
         private void DangNhap()
